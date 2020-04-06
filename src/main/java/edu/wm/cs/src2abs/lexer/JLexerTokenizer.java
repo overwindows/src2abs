@@ -264,10 +264,11 @@ public class JLexerTokenizer {
 	}
 
 	private String getListOfValues(Collection<String> collection) {
-
+                byte sep[]={0x01};
+                String seperator=new String(sep);
 		StringBuilder sb = new StringBuilder();
 		for(String s : collection) {
-			sb.append(s+",");
+			sb.append(s+seperator);
 		}
 
 		return sb.toString();
